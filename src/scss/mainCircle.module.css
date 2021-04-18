@@ -1,0 +1,56 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0; }
+
+body {
+  background: #3fc;
+  width: 100%; }
+
+.container {
+  margin: 100px auto;
+  display: flex;
+  width: 500px;
+  height: 500px;
+  background: #222;
+  flex-wrap: wrap; }
+
+.colors {
+  margin: auto;
+  height: 240px;
+  width: 240px; }
+
+.nameField {
+  font-size: 22px;
+  font-style: 700; }
+
+.greenBut {
+  background: green;
+  border-top-left-radius: 500px;
+  color: white; }
+
+.redBut {
+  background: red;
+  border-top-right-radius: 500px;
+  color: white; }
+
+.yellowBut {
+  background: yellow;
+  border-bottom-left-radius: 500px; }
+
+.blueBut {
+  background: blue;
+  border-bottom-right-radius: 500px; }
+
+.center {
+  position: absolute;
+  border-radius: 100%;
+  margin: 150px 0 0 150px;
+  background: white;
+  width: 200px;
+  height: 200px;
+  border: 12px solid #333; }
+
+#container {
+  color: black; }
+
+/*# sourceMappingURL=mainCircle.module.css.map */

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGA,OAAQ;EACN,MAAM,EAAE,IAAI;EACZ,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,KAAK",
+"sources": ["color.module.scss"],
+"names": [],
+"file": "color.module.css"
+}
