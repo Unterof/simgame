@@ -1,5 +1,4 @@
-
-
+$size : 500px;
 
 .colors {
   margin: auto;
@@ -7,3 +6,37 @@
   width: 240px;
 }
 
+.green {
+  margin: auto;
+  height: 240px;
+  width: 240px;
+  background: green;
+  border-top-left-radius: $size;
+  color: white;
+  ;
+}
+
+.red {
+  margin: auto;
+  height: 240px;
+  width: 240px;
+  background: red;
+  border-top-right-radius: $size;
+  color: white;
+}
+
+.yellow {
+  margin: auto;
+  height: 240px;
+  width: 240px;
+  background: yellow;
+  border-bottom-left-radius: $size;
+}
+
+.blue {
+  margin: auto;
+  height: 240px;
+  width: 240px;
+  background: blue;
+  border-bottom-right-radius: $size;
+}
