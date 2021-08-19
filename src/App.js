@@ -4,7 +4,7 @@ import MainCircle from "./Components/MainCircle";
 function App() {
   return (
     <div className="App">
-      <MainCircle/>
+      <MainCircle />
     </div>
   );
 }
