@@ -1,9 +1,11 @@
-import {combineReducers, createStore} from 'redux'
+import {compose, combineReducers, createStore} from 'redux'
+import mainCircleReducer from "./mainCircle-reducer";
 
-
-const store = createStore()
 const reducers = combineReducers({
-
+    mainCircleReducer
 })
-
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(reducers,composeEnhancer)
+
+
+export default  store

@@ -33,13 +33,18 @@ const MainCircle = () => {
   };
 
   return (
+    <div className={styles.App}>
     <div className={styles.container}>
-      <div className={styles.outterContainer}>
+      <div className={styles.outerContainer}>
+        <div className={styles.innerContainer}>
+        <Colors styles={styles} soundBoard={[soundBoard]} lightUp={lightUp} />
+         <Center name={centerStyle} />
+        </div>
         
-      <Colors styles={styles} soundBoard={[soundBoard]} lightUp={lightUp} />
-      <Center name={centerStyle} />
+     
       
       </div>
+    </div>
     </div>
   );
 };

@@ -1,6 +1,9 @@
-.colors {
-  margin: auto;
-  height: 240px;
-  width: 240px; }
+.item.active {
+  opacity: 0.5; }
+
+.block {
+  display: flex;
+  background: white;
+  flex-wrap: wrap; }
 
 /*# sourceMappingURL=color.module.css.map */

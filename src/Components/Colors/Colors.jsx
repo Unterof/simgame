@@ -9,31 +9,23 @@ const cx = cnBind.bind(styles)
 
 const Colors = ({ isClicked,lightUp, styles }) => {
     const colorTypes = [styles.green, styles.red, styles.yellow, styles.blue]
-    const colorItem = ["green", "red", "yellow", "blue"]
-
-//  const colorSetter = cn(cx({
-
-//  }))
-
     
-    const lightCircleOne = cn({
-     
-    })
-    console.log('styles',styles,isClicked)
-   const pressedColor = cn('item',cx({
-    active: isClicked,
-   }))
+   
+
+// let className = cx({
+//     wrapper:true,
+//     block:false
+// })
 
 
     return (
 
-        <div className={cn(styles.block)}>
-            {colorTypes.map((el, item) => {
-              
-                return <div
-                
-                    id={item} className={el}
-                     key={item} onClick={lightUp}>{el} </div>
+        <div className={cn(styles.wrapper)}>
+            {colorTypes.forEach((el, item) => {
+           
+                 <div
+                    id={item} className={cn(styles.block,el)}
+                     key={item} onClick={lightUp}> </div>
 
             })}
 

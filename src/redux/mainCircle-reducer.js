@@ -16,17 +16,12 @@ let initialstate = {
         ]
 }
 
-const mainCirclereducer = (state = initialstate, action) => {
+ const mainCircleReducer = (state = initialstate, action) => {
     switch (action.type) {
 
-        case playSound{
-     return {
-         ...state,
-         soundBoard: {[]}
-     }
-        }
-
-    };
-    default :
-        return state;
+        default :
+            return state;
+    }
 }
+
+export default mainCircleReducer
