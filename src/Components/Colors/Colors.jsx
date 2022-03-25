@@ -7,8 +7,8 @@ import Center from '../Center/Center';
 
 const cn = cnBind.bind(styles)
 
-const Colors = ({ lightUp, keyPressed, styles }) => {
-    const colorTypes = ['green', 'red', 'yellow', 'blue']
+const Colors = ({ lightUp, isOn, colorTypes,color }) => {
+    
 
 
     return (
@@ -16,7 +16,7 @@ const Colors = ({ lightUp, keyPressed, styles }) => {
         <div className={cn('flex-container')}>
             {colorTypes.map((el, item) => {
                 return <div
-                    id={item} className={cn('colors', el, keyPressed ? 'animLight' : '')}
+                    id={item} className={cn('colors', el, el===color ? isOn && 'animLight' : '' )}
                     key={item} onClick={lightUp}> </div>
 
             })}
