@@ -1,12 +1,9 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-import cn from "classnames";
-import cnBind from "classnames/bind";
-import Center from "./Center/Center";
 import styles from "../scss/mainCircle.module.scss";
 import Colors from "./Colors/Colors";
 
-const cx = cnBind.bind(styles);
+
 
 const sound1 = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound1.mp3");
 
@@ -19,33 +16,39 @@ const sound4 = new Audio("https://s3.amazonaws.com/freecodecamp/simonSound4.mp3"
 const soundBoard = [sound1, sound2, sound3, sound4];
 
 const MainCircle = () => {
-  const [isClicked, setClicked] = useState(null);
 
-  
-  const centerStyle = cn(cx("center"));
 
-  const lightUp = (event) => {
-      console.log('event',event.target.id)
-      
-    let num = Number(event.target.id);
-    soundBoard[num].playbackRate = 0.7;
-    soundBoard[num].play();
+  let [keyPressed, setKeyPressed] = useState(false)
+
+  const lightUp = (e) => {
+
+
+    let elemId = e.target.id
+
+    console.log('elemId', elemId)
+    soundBoard[elemId].playbackRate = 0.7;
+    soundBoard[elemId].play();
+
+    setTimeout(function () {
+
+      setKeyPressed(false)
+
+    }, 500)
   };
 
   return (
-    <div className={styles.App}>
+
     <div className={styles.container}>
-      <div className={styles.outerContainer}>
-        <div className={styles.innerContainer}>
-        <Colors styles={styles} soundBoard={[soundBoard]} lightUp={lightUp} />
-         <Center name={centerStyle} />
-        </div>
-        
-     
-      
-      </div>
+
+      <Colors styles={styles} soundBoard={[soundBoard]} keyPressed={keyPressed} lightUp={lightUp} />
+
+
+
     </div>
-    </div>
+
+
+
+
   );
 };
 

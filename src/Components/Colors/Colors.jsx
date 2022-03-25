@@ -1,35 +1,27 @@
 import React from 'react';
 import styles from "../../scss/mainCircle.module.scss";
-// import styles from './css/color.module.scss'
-import cn from 'classnames'
-import cnBind  from 'classnames/bind' 
+
+import cnBind from 'classnames/bind'
+import Center from '../Center/Center';
 
 
-const cx = cnBind.bind(styles)
+const cn = cnBind.bind(styles)
 
-const Colors = ({ isClicked,lightUp, styles }) => {
-    const colorTypes = [styles.green, styles.red, styles.yellow, styles.blue]
-    
-   
-
-// let className = cx({
-//     wrapper:true,
-//     block:false
-// })
+const Colors = ({ lightUp, keyPressed, styles }) => {
+    const colorTypes = ['green', 'red', 'yellow', 'blue']
 
 
     return (
 
-        <div className={cn(styles.wrapper)}>
-            {colorTypes.forEach((el, item) => {
-           
-                 <div
-                    id={item} className={cn(styles.block,el)}
-                     key={item} onClick={lightUp}> </div>
+        <div className={cn('flex-container')}>
+            {colorTypes.map((el, item) => {
+                return <div
+                    id={item} className={cn('colors', el, keyPressed ? 'animLight' : '')}
+                    key={item} onClick={lightUp}> </div>
 
             })}
 
-
+            <Center />
         </div>
 
     )
